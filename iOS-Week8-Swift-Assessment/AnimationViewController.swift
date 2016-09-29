@@ -20,7 +20,7 @@ class AnimationViewController: UIViewController {
         setUptestConstraints()
     }
 
-    @IBAction func animate(sender: AnyObject) {
+    @IBAction func animate(_ sender: AnyObject) {
         
         //Animate your square here
     }
@@ -36,14 +36,14 @@ class AnimationViewController: UIViewController {
         
         testView.translatesAutoresizingMaskIntoConstraints = false
         
-        testViewTop = testView.topAnchor.constraintEqualToAnchor(view.topAnchor)
-        testViewTop.active = true
+        testViewTop = testView.topAnchor.constraint(equalTo: view.topAnchor)
+        testViewTop.isActive = true
         
-        testViewLeft = testView.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
-        testViewLeft.active = true
+        testViewLeft = testView.leftAnchor.constraint(equalTo: view.leftAnchor)
+        testViewLeft.isActive = true
         
-        testView.heightAnchor.constraintEqualToConstant(200).active = true
-        testView.widthAnchor.constraintEqualToAnchor(testView.heightAnchor).active = true
+        testView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        testView.widthAnchor.constraint(equalTo: testView.heightAnchor).isActive = true
 
     }
 
